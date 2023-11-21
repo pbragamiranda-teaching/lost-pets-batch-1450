@@ -1,0 +1,12 @@
+<h1>Check all the found pets!</h1>
+
+
+<ul>
+  <% @pets.each do |pet| %>
+    <li>
+      <%= link_to pet.name, pet_path(pet) %>
+      , the <%= pet.specie %>, found on <%= pet.found_on %>
+      at <%= pet.address %>
+    </li>
+  <% end %>
+</ul>
